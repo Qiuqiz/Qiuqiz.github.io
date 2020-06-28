@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/swiper.css" />
+		<style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #fff;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -150px;
+      margin-top: -150px;
+    }
+    .swiper-container{
+    --swiper-theme-color: #ff6600;/* 设置Swiper风格 */
+    --swiper-navigation-color: red;/* 单独设置按钮颜色 */
+    --swiper-navigation-size: 30px;/* 设置按钮大小 */
+  }
+    
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+	</head>
+	<body>
+		<<div class="swiper-container swiper-container-cube swiper-container-3d swiper-container-initialized swiper-container-horizontal" style="cursor: grab;">
+		    <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg); transform-origin: 50% 50% -150px;">
+		      <div class="swiper-slide swiper-slide-active" style='width: 300px; background-image: url("./images/nature-1.jpg"); transform: rotateX(0deg) rotateY(0deg) translate3d(0px, 0px, 0px);'><div class="swiper-slide-shadow-left" style="opacity: 0;"></div><div class="swiper-slide-shadow-right" style="opacity: 0;"></div></div>
+		      <div class="swiper-slide swiper-slide-next" style='width: 300px; background-image: url("./images/nature-2.jpg"); transform: rotateX(0deg) rotateY(90deg) translate3d(0px, 0px, 0px);'><div class="swiper-slide-shadow-left" style="opacity: 1;"></div><div class="swiper-slide-shadow-right" style="opacity: 0;"></div></div>
+		      <div class="swiper-slide" style='width: 300px; background-image: url("./images/nature-3.jpg"); transform: rotateX(0deg) rotateY(180deg) translate3d(300px, 0px, 300px);'><div class="swiper-slide-shadow-left" style="opacity: 1;"></div><div class="swiper-slide-shadow-right" style="opacity: 0;"></div></div>
+		      <div class="swiper-slide" style='width: 300px; background-image: url("./images/nature-4.jpg"); transform: rotateX(0deg) rotateY(270deg) translate3d(-300px, 0px, 900px);'><div class="swiper-slide-shadow-left" style="opacity: 1;"></div><div class="swiper-slide-shadow-right" style="opacity: 0;"></div></div>
+		      <div class="swiper-slide" style='width: 300px; background-image: url("./images/nature-6.jpg"); transform: rotateX(0deg) rotateY(360deg) translate3d(1200px, 0px, 0px);'><div class="swiper-slide-shadow-left" style="opacity: 1;"></div><div class="swiper-slide-shadow-right" style="opacity: 0;"></div></div>
+		      <div class="swiper-slide" style='width: 300px; background-image: url("./images/nature-5.jpg"); transform: rotateX(0deg) rotateY(360deg) translate3d(-1200px, 0px, 0px);'><div class="swiper-slide-shadow-left" style="opacity: 1;"></div><div class="swiper-slide-shadow-right" style="opacity: 0;"></div></div>
+		      <div class="swiper-cube-shadow" style="height: 300px; transform: translate3d(0px, 170px, -150px) rotateX(90deg) rotateZ(0deg) scale(0.94);"></div></div>
+		    <!-- Add Pagination -->
+		      <div class="swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+		  	 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+			<div class="swiper-button-prev"></div><!--左箭头。如果放置在swiper-container外面，需要自定义样式。-->
+	        <div class="swiper-button-next"></div><!--右箭头。如果放置在swiper-container外面，需要自定义样式。-->
+		</div>
+		   
+		
+		<script src="js/swiper.js"></script>
+	<script>
+	    var swiper = new Swiper('.swiper-container', {
+	    	loop:true,
+	    	autoplay:{
+	    		delay:500,
+	    		disableOnInteraction: false,
+	    	},
+	    	
+	    	 navigation: {
+		      nextEl: '.swiper-button-next',
+		      prevEl: '.swiper-button-prev',
+		    },
+	    	
+	      effect: 'cube',
+	      grabCursor: true,
+	      cubeEffect: {
+	        shadow: true,
+	        slideShadows: true,
+	        shadowOffset: 20,
+	        shadowScale: 0.94,
+	      },
+	      pagination: {
+	        el: '.swiper-pagination',
+	      },
+	    });
+ 	 </script>
+	</body>
+</html>
